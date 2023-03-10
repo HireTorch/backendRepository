@@ -10,7 +10,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "boards_master")
-public class BoardMaster {
+public class BoardsMaster {
 	
 	@Id
     @Column(name = "board_id")
@@ -24,7 +24,7 @@ public class BoardMaster {
     private CandidateHscSscAcademics academics;
     
 
-	public BoardMaster() {
+	public BoardsMaster() {
 		super();
 	}
 

@@ -10,21 +10,21 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "Streams_Master ")
-public class StreamMaster {
-	@Id
-	@Column(name = "stream_Id")
-	private Integer streamId;
-	@Column(name = "stream_Name")
-	private String streamName;
+public class StreamsMaster {
 
-	@OneToOne(mappedBy = "streams")
-	@JsonIgnore
-	private CandidateHscSscAcademics academics;
+		@Id
+		@Column(name = "stream_Id")
+		private Integer streamId;
+		@Column(name = "stream_Name")
+		private String streamName;
 
-		
-		public StreamMaster() {
-		super();
-	}
+		@OneToOne(mappedBy = "streams")
+		@JsonIgnore
+		private CandidateHscSscAcademics academics;
+
+		public StreamsMaster() {
+			// TODO Auto-generated constructor stub
+		}
 
 		public Integer getStreamId() {
 			return streamId;
@@ -57,5 +57,5 @@ public class StreamMaster {
 			return "StreamsMaster [streamId=" + streamId + ", streamName=" + streamName + "]";
 		}
 
-		
+			
 }

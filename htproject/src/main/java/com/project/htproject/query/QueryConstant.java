@@ -11,5 +11,7 @@ public final class QueryConstant {
     public static final String SELECT_COMPANY_BY_EMAIL = "select c from Company c where c.companyEmail = :email";
     
     public static final String SELECT_COMAPNY_BY_EMAIL_PASSWORD = "select c from Company c where c.companyEmail = :email and c.companyPassword= :encodedPassword";
+    
+    public static final String SELECT_JOBDETAILS_BY_COMAPANYID = "select j from JobDetails j where j.company =:companyId ";
 	
 }

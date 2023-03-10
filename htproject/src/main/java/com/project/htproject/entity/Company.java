@@ -1,11 +1,15 @@
 package com.project.htproject.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
@@ -30,6 +34,9 @@ public class Company implements Serializable{
 	private String companyUserName;
 	@Column(name="company_password")
 	private String companyPassword;
+	
+	@OneToMany(mappedBy = "company", fetch = FetchType.LAZY)
+	private List<JobDetails> jobDetails = new ArrayList<JobDetails>(0);
 	
 	
 	public Company() {

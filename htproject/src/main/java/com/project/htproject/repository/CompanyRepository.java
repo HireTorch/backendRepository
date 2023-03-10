@@ -9,7 +9,7 @@ import com.project.htproject.entity.Company;
 import com.project.htproject.query.QueryConstant;
 
 
-public interface CompanyRepository extends JpaRepository<Company, Long> {
+public interface CompanyRepository extends JpaRepository<Company, String> {
 
 	@Query(QueryConstant.SELECT_COMPANY_BY_EMAIL)
 	Company findByEmail(String email);

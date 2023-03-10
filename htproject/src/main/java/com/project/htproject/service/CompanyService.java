@@ -70,8 +70,10 @@ public class CompanyService implements ICompanyService {
  
 
 	public Company getOneCompany(Long companyId) {
+		System.out.println(companyId);
 		Optional<Company> companyOpt = companyRepositoryByLong.findById(companyId);
 		Company company = companyOpt.get();
+		System.out.println(company);
 		return company;
 	}
 

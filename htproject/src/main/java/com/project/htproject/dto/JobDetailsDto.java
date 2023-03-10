@@ -56,6 +56,11 @@ public class JobDetailsDto {
 	}
 
 
+	public JobDetailsDto() {
+		super();
+	}
+
+
 	public Long getJobId() {
 		return jobId;
 	}
